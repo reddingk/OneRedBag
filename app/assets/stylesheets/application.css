@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+#orb-main-nav {
+	background-color: #DB4D4D;
+}
+#orb-inside-nav > li > a {
+	color: #ffffff;
+}
+#orb-inside-nav > li > a:hover, #orb-inside-nav > li > a:focus {
+	background-color: #C54545;
+}
+.orb-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+
