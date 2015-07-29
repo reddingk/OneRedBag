@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>One Red Bag</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<%= link_to "One Red Bag", "#", id: "logo" %>	
+	<div class="orb-container">
+		<%= yield %>
+	</div>
+
+</body>
+</html>
