@@ -1,2 +1,10 @@
-<h1>C1M2S3#index</h1>
-<p>Find me in app/views/c1_m2_s3/index.html.erb</p>
+<h1>CMS - Editor</h1>
+<p><b>Bag Count:</b> <%= @bagcount %></p>
+<p><b>News Feed:</b></p>
+	<% @newsfeed.each do |news| %>
+		<p><%= news["date"] %> | <%= news["title"] %> | <%= news["content"] %>
+	<% end %>
+<p><b>Meet Ups: </b></p>
+	<% @meetup.each do |meets| %>
+		<p><%= meets["date"] %> | <%= meets["time"] %> | <%= meets["location"] %>
+	<% end %>
