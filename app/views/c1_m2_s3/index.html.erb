@@ -6,5 +6,5 @@
 	<% end %>
 <p><b>Meet Ups: </b></p>
 	<% @meetup.each do |meets| %>
-		<p><%= meets["date"] %> | <%= meets["time"] %> | <%= meets["location"] %>
+		<p><%= meets["date"] %> | <%= meets["title"] %> | <%= meets["time"] %> | <%= meets["location"] %>
 	<% end %>

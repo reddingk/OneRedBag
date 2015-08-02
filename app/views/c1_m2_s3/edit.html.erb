@@ -12,11 +12,11 @@
 	</tr>
 	<tr>
 		<td>News Feed</td>
-		<td>View Items</td>
+		<td><%= link_to("View News Items",{controller:"c1_m2_s3", action:"item_list", page:"newsfeed"}) %></td>
 	</tr>
 	<tr>
 		<td>Meet Up</td>
-		<td>View Dates</td>
+		<td><%= link_to("View Meet Ups",{controller:"c1_m2_s3", action:"item_list", page:"meetup"}) %></td>
 	</tr>
 
 </table>

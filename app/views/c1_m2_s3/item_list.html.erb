@@ -1,0 +1,20 @@
+<h1><%= @pagename %> List</h1>
+
+<div><%= link_to("Back to Page Items",{controller:"c1_m2_s3", action:"edit"}) %></div>
+<table class="table">
+	<tr>
+		<th>Date</th>
+		<th>Title</th>
+		<th></th>
+	</tr>
+	<% @items.each do |item| %>
+		<tr>
+			<td><%= item["date"] %></td>
+			<td><%= item["title"] %></td>
+			<td>EDIT</td>
+		</tr>
+	<% end %>
+	<tr>
+		<td>+ Add <%= @pagename%> item</td>
+	</tr>
+</table>
