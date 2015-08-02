@@ -18,6 +18,9 @@ class C1M2S3Controller < ApplicationController
   end
 
   def edit
+	@jfile = File.read(Rails.public_path+"info.json")	
+	@jdata = JSON.parse(@jfile)
+	@bagcount = @jdata["bagcount"]
 
 	render layout: "c1m2s3"
   end

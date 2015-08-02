@@ -8,7 +8,7 @@
 
 	<tr>
 		<td>bagcount</td>
-		<td>Edit</td>
+		<td><button class="btn btn-default" data-toggle="modal" data-target="#bagcountmodal">Edit</button></td>
 	</tr>
 	<tr>
 		<td>News Feed</td>
@@ -20,3 +20,21 @@
 	</tr>
 
 </table>
+
+<div class="modal fade" id="bagcountmodal" tabindex="-1" role="dialog" aria-labelledby="bagcountmodal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="bagcountmodal">Edit Bag Count</h4>
+		        </div>
+			<div class="modal-body">				
+				<label>Bag Count: </label>
+				<input value= <%= @bagcount %> />
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save Changes</button>
+		        </div>
+		</div>
+	</div>
+</div>
