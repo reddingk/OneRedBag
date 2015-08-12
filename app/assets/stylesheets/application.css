@@ -26,6 +26,7 @@ html, body { font-family: 'Josefin Sans', sans-serif;}
 #orb-inside-nav > li > a:hover, #orb-inside-nav > li > a:focus, #orb-inside-nav > li >.current-page {
 	color: #ffffff;
 	font-weight: bold;
+	border-bottom: solid 2px #ffffff;
 }
 .orb-nav-logo{ height: 55px;}
 .social { margin-top: 15px; }

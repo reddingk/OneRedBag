@@ -14,5 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require carouFredSel.js
+//= require home.js
 //= require_tree .
 
+$(document).ready(function () {
+	alert("456");	
+})
