@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 # Twitter Bootstrap
 gem 'bootstrap-sass','3.2.0.0'
+#Font Awesome
+gem 'font-awesome-sass'
 #JSON
 gem 'json'
 # Use SCSS for stylesheets

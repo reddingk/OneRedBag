@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 #HOME
   get 'home/index'
   root 'home#index'
+  get 'home/construction'
 
 end

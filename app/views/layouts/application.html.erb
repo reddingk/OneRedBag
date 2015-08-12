@@ -2,26 +2,33 @@
 <html>
 <head>
   <title>One Red Bag</title>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-	<%= link_to "One Red Bag", "#", id: "logo" %>
-	<nav class="nav navbar-default" id="orb-main-nav">
-		<div class="container-fluid">
-			<div>
+<body>	
+	<nav class="nav navbar-inverse" id="orb-main-nav" role="navigation">
+		<div class="container relative">
+			<div class="navbar-header">
+				<%= link_to image_tag("orb-logo.png", class:'orb-nav-logo', alt:'One Red Bag'), {controller: "home", action: "index"}, id: "logo" %>
+			</div>
+			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav" id="orb-inside-nav">
-					<li><a href="#">About</a></li>
-					<li><a href="#">Our Story</a></li>	
-					<li><a href="#">Help us</a></li>
-					<li><a href="#">Media</a></li>
+					<li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
+					<li><%= link_to "About Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+					<li><%= link_to "Our Story", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>	
+					<li><%= link_to "Help Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+					<li><%= link_to "Media", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+				</ul>
+				<ul class="social">
+					<li><a href="" class="fa fa-facebook fa-lg"></a></li>
+					<li><a href="" class="fa fa-youtube-play fa-lg"></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<div class="orb-container">
+	<div class="container">
 		<%= yield %>
 	</div>
 
