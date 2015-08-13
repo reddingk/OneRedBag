@@ -54,7 +54,7 @@
 		var FN = {};
 
 		FN._init = function(o, setOrig, start)		{
-			
+			/*Edit to fit scalable css*/
 			if(o.items.start == undefined) {
 				o.items.width = $tt0.offsetWidth;
 				o.items.height = $tt0.offsetHeight;

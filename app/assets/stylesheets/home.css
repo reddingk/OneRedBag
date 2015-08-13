@@ -23,7 +23,7 @@
 	overflow: hidden;
 	position: absolute;
 	top: 0;
-	right: 0;
+	right: 50px;
 }
 #pager div {
 	width: 100% !important;
