@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require carouFredSel.js
+//= require carouFredSel-6.js
 //= require home.js
 //= require_tree .
 

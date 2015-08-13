@@ -1,57 +1,103 @@
 /*Home CSS*/
 
 #wrapper {
-	width: 660px;
-	height: 310px;
+	width: 100%;
 	position: absolute;
-	/*
-	margin: -155px 0 0 -330px;
-	top: 50%;
-	left: 50%;*/
+	margin-top: 10px;
 }
-#wrapper:after {
-	/*content: url(img/shadow.png);*/
-	position: absolute;
-	bottom: -40px;
-	left: 5px;
-	z-index: 1;
-}
-#carousel {
-	width: 550px;
-	height: 310px;
+
+#carousel {		
+	width: 83% !important;
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
 }
 #carousel img {
+	width: 83% !important;
+	height: 100% !important;
 	display: block;
 	float: left;
 }
 #pager {
-	width: 100px;
-	height: 310px;
+	width: 17% !important;
 	overflow: hidden;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
 #pager div {
-	height: 80px;
-	width: 100px;
+	width: 100% !important;
 }
 #pager img {
 	cursor: pointer;
-	display: block;
-	height: 70px;
-	width: 100px;
+	display: block;	
+	width: 100% !important;
 	margin-bottom: 10px;
 	float: left;
 }
-.carousel-img {
-	width:550;
-	height:310;
+@media (min-width: 1200px) {
+	#wrapper{
+		width: 1170px !important;
+		height: 549px !important;
+	}
+	#carousel, #carousel img {
+		width: 930px !important;/*975*/
+		height: 524px !important;/*549*/
+	}
+	#pager {
+		width: 177px;
+		height: 549px;
+	}
+	#pager div {
+		height: 141px;
+		width: 177px;
+	}
+	#pager img {
+		height: 131px;
+		width: 177px;		
+	}
 }
-.mini-img {
-	width:100px;
-	height: 70px;
+@media (min-width: 992px) {
+	#wrapper {
+		width: 970px !important;
+		height: 455px !important;
+	}
+	#carousel, #carousel img {
+		width: 760px !important;/*808*/
+		height: 428px !important;/*455*/
+	}
+	#pager {
+		width: 146px;
+		height: 455px;
+	}
+	#pager div {
+		height: 117px;
+		width: 146px;
+	}
+	#pager img {
+		height: 107px;
+		width: 146px;		
+	}
+}
+@media (min-width: 768px) {
+	#wrapper {
+		width: 750px !important;
+		height: 352px !important;
+	}
+	#carousel, #carousel img {
+		width: 567px !important; /*624*/
+		height: 320px !important; /*352*/
+	}
+	#pager {
+		width: 113px;
+		height: 352px;
+	}
+	#pager div {
+		height: 90px;
+		width: 113px;
+	}
+	#pager img {
+		height: 80px;
+		width: 113px;		
+	}
 }
