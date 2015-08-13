@@ -1,16 +1,21 @@
 /*Home CSS*/
 
+/*Carousel*/
 #wrapper {
 	width: 100%;
-	position: absolute;
+	/*position: absolute;*/
 	margin-top: 10px;
+	
 }
-
+.caroufredsel_wrapper {
+	display: inline-block !important;
+}
 #carousel {		
 	width: 83% !important;
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
+	display: inline-block;
 }
 #carousel img {
 	width: 83% !important;
@@ -19,11 +24,13 @@
 	float: left;
 }
 #pager {
-	width: 17% !important;
-	overflow: hidden;
-	position: absolute;
+	/*width: 17% !important;
+	overflow: hidden;*/
+	/*position: absolute;
 	top: 0;
-	right: 50px;
+	right: 50px;*/
+
+	display: inline-block;
 }
 #pager div {
 	width: 100% !important;
@@ -34,6 +41,20 @@
 	width: 100% !important;
 	margin-bottom: 10px;
 	float: left;
+}
+
+/*Slide up Box*/
+.center-slides {
+	position: relative;
+}
+.slide-container {
+	width: 100%;
+	height: 300px;
+	background-color:#E0E0E0;
+}
+.slide-back > i {
+	vertical-align: middle;
+	margin: 0px auto;
 }
 @media (min-width: 1200px) {
 	#wrapper{
@@ -85,8 +106,8 @@
 		height: 352px !important;
 	}
 	#carousel, #carousel img {
-		width: 567px !important; /*624*/
-		height: 320px !important; /*352*/
+		width: 624px !important; /*624-567*/
+		height: 342px !important; /*352-320*/
 	}
 	#pager {
 		width: 113px;
