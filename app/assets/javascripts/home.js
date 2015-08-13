@@ -1,7 +1,4 @@
 /*Home js*/
-$(document).ready(function () {
-	alert("123");	
-})
 
 $(function() {
 	var $carousel = $('#carousel'),
@@ -10,8 +7,11 @@ $(function() {
 	//	gather the thumbnails
 	var $thumb = $( '<div class="thumb" />' );
 	$carousel.children().each(function() {
-		var src = $(this).attr( 'src' );
-		$thumb.append( '<img src="' + src.split('/large/').join('/small/') + '" />' );
+		//var src = $(this).attr( 'src' );
+		var src = $(this).data( "smPath" );
+		//$thumb.append( '<img src="' + src.split('/large/').join('/small/') + '" />' );
+		//$thumb.append( '<img src="' + src + '" class="mini-img" />' );
+		$thumb.append( '<img src="' + src + '" />'  );
 	});
  
 	//	duplicate the thumbnails
@@ -29,10 +29,14 @@ $(function() {
 		scroll: {
 			fx: 'directscroll',
 			onBefore: function( data ) {
-				var oldSrc = data.items.old.attr('src').split('/large/').join('/small/'),
-					newSrc = data.items.visible.attr('src').split('/large/').join('/small/'),
-					$t = $thumbs.find('img:first-child[src="' + newSrc + '"]').parent();
+				/*var oldSrc = data.items.old.attr('src').split('/large/').join('/small/'),
+				newSrc = data.items.visible.attr('src').split('/large/').join('/small/'),
+				$t = $thumbs.find('img:first-child[src="' + newSrc + '"]').parent();*/
  
+			var oldSrc = data.items.old.data( "smPath" ),
+			newSrc = data.items.visible.data( "smPath" ),
+			$t = $thumbs.find('img:first-child[src="' + newSrc + '"]').parent();
+
 				$t.trigger('slideTo', [$('img[src="' + oldSrc + '"]', $t), 'next']);
 			}
 		}
@@ -56,7 +60,8 @@ $(function() {
  
 		//	click the carousel
 		$(this).click(function() {
-			var src = $(this).children().first().attr('src').split('/small/').join('/large/');
+			//var src = $(this).children().first().attr('src').split('/small/').join('/large/');
+			var src = $(this).children().first().data( "lrgPath" ); 
 			$carousel.trigger('slideTo', [$('img[src="' + src + '"]', $carousel), 'next']);
 		});
 	});

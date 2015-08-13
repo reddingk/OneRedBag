@@ -3,11 +3,11 @@
 <div id="wrapper">
 	<div id="inner">
 		<div id="carousel">
-			<%= image_tag("large/rat.jpg", class: 'carousel-img', alt: 'img1')%>
-			<%= image_tag("large/toystory.jpg", class: 'carousel-img', alt: 'img2')%>
-			<%= image_tag("large/up.jpg", class: 'carousel-img', alt: 'img3')%>
-			<%= image_tag("large/walle.jpg", class: 'carousel-img', alt: 'img4')%>
-			<%= image_tag("large/bugs.jpg", class: 'carousel-img', alt: 'img5')%>
+			<%= image_tag("large/rat.jpg", class: 'carousel-img', alt: 'img1', data:{ lrg_path: asset_path("large/rat.jpg"), sm_path: asset_path("small/rat.jpg")}) %>
+			<%= image_tag("large/toystory.jpg", class: 'carousel-img', alt: 'img2', data:{ lrg_path: asset_path("large/toystory.jpg"), sm_path: asset_path("small/toystory.jpg")}) %>
+			<%= image_tag("large/up.jpg", class: 'carousel-img', alt: 'img3', data:{ lrg_path: asset_path("large/up.jpg"), sm_path: asset_path("small/up.jpg")})%>
+			<%= image_tag("large/walle.jpg", class: 'carousel-img', alt: 'img4', data:{ lrg_path: asset_path("large/walle.jpg"), sm_path: asset_path("small/walle.jpg")})%>
+			<%= image_tag("large/bugs.jpg", class: 'carousel-img', alt: 'img5', data:{ lrg_path: asset_path("large/bugs.jpg"), sm_path: asset_path("small/bugs.jpg")})%>
 		</div>
 		<div id="pager"></div>
 	</div>

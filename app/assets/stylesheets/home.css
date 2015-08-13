@@ -3,13 +3,14 @@
 #wrapper {
 	width: 660px;
 	height: 310px;
-	margin: -155px 0 0 -330px;
 	position: absolute;
+	/*
+	margin: -155px 0 0 -330px;
 	top: 50%;
-	left: 50%;
+	left: 50%;*/
 }
 #wrapper:after {
-	content: url(img/shadow.png);
+	/*content: url(img/shadow.png);*/
 	position: absolute;
 	bottom: -40px;
 	left: 5px;
@@ -49,4 +50,8 @@
 .carousel-img {
 	width:550;
 	height:310;
+}
+.mini-img {
+	width:100px;
+	height: 70px;
 }
