@@ -44,18 +44,45 @@
 }
 
 /*Slide up Box*/
-.center-slides {
-	position: relative;
+.center-cards {
+	/*position: relative;*/
 }
-.slide-container {
+.card {
 	width: 100%;
-	height: 300px;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+.card-back {
 	background-color:#E0E0E0;
+	height: 100%;
+	width: 100%;
 }
-.slide-back > i {
-	vertical-align: middle;
-	margin: 0px auto;
+
+.card-front {
+	background-color: #000000;
+	padding: 10px;
+	position: absolute;
+	bottom: -330px;
+	height:100%;
+	width: 100%;
+	border-top:7px solid #DB4D4D;
+	
+	transition: all 0.5s ease;
 }
+
+.card :hover ~ .card-front, .card-front:hover, .card-back:hover + .card-front {
+	bottom: 0;
+}
+.card-front h3{
+	font-size:20px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #DB4D4D;
+}
+
+
 @media (min-width: 1200px) {
 	#wrapper{
 		width: 1170px !important;
