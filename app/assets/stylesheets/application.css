@@ -38,3 +38,4 @@ html, body { font-family: 'Josefin Sans', sans-serif;}
 .social li .fa { margin: 0px 10px; color: #ffffff; }
 .social li .fa:hover { color: #000000; text-decoration:none;}
 
+.orb-container { margin-bottom: 30px;}
