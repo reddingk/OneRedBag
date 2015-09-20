@@ -1,16 +1,72 @@
-<div id="wrapper">
-	<div id="inner">
-		<div id="carousel">
-			<%= image_tag("large/img1.jpg", class: 'carousel-img', alt: 'img1', data:{ lrg_path: asset_path("large/img1.jpg"), sm_path: asset_path("small/img1.jpg")}) %>
-			<%= image_tag("large/img2.jpg", class: 'carousel-img', alt: 'img2', data:{ lrg_path: asset_path("large/img2.jpg"), sm_path: asset_path("small/img2.jpg")}) %>
-			<%= image_tag("large/img3.jpg", class: 'carousel-img', alt: 'img3', data:{ lrg_path: asset_path("large/img3.jpg"), sm_path: asset_path("small/img3.jpg")})%>
-			<%= image_tag("large/img4.jpg", class: 'carousel-img', alt: 'img4', data:{ lrg_path: asset_path("large/img4.jpg"), sm_path: asset_path("small/img4.jpg")})%>
-			<%= image_tag("large/img5.jpg", class: 'carousel-img', alt: 'img5', data:{ lrg_path: asset_path("large/img5.jpg"), sm_path: asset_path("small/img5.jpg")})%>
-		</div>
-		<div id="pager"></div>
+<!--http://bootsnipp.com/snippets/featured/carousel-with-timer-and-caption-->
+<div class="row orb-carousel">
+    <!-- The carousel -->
+    <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#transition-timer-carousel" data-slide-to="1"></li>
+		<li data-target="#transition-timer-carousel" data-slide-to="2"></li>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		<div class="item active">
+            <%= image_tag("large/img1.jpg", class: '', alt: 'img1') %>
+            <div class="carousel-caption">
+                <h1 class="carousel-caption-header">Slide 1</h1>
+                <p class="carousel-caption-text hidden-sm hidden-xs">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+                </p>
+            </div>
+        </div>
+               
+        <div class="item">
+             <%= image_tag("large/img2.jpg", class: '', alt: 'img2') %>
+             <div class="carousel-caption">
+	            <h1 class="carousel-caption-header">Slide 2</h1>
+                <p class="carousel-caption-text hidden-sm hidden-xs">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+                </p>
+            </div>
+        </div>
+                
+        <div class="item">
+            <%= image_tag("large/img3.jpg", class: '', alt: 'img3') %>
+            <div class="carousel-caption">
+                <h1 class="carousel-caption-header">Slide 3</h1>
+                <p class="carousel-caption-text hidden-sm hidden-xs">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim aliquet rutrum. Praesent vitae ante in nisi condimentum egestas. Aliquam.
+                </p>
+            </div>
+        </div>
+    </div>
+
+	<!-- Controls -->
+	<a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+            
+    <!-- Timer "progress bar" -->
+    <hr class="transition-timer-carousel-progress-bar animate" />
 	</div>
 </div>
 
+<!--<div id="wrapper">
+	<div id="inner">
+		<div id="carousel">
+			< %= image_tag("large/img1.jpg", class: 'carousel-img', alt: 'img1', data:{ lrg_path: asset_path("large/img1.jpg"), sm_path: asset_path("small/img1.jpg")}) %>
+			< %= image_tag("large/img2.jpg", class: 'carousel-img', alt: 'img2', data:{ lrg_path: asset_path("large/img2.jpg"), sm_path: asset_path("small/img2.jpg")}) %>
+			< %= image_tag("large/img3.jpg", class: 'carousel-img', alt: 'img3', data:{ lrg_path: asset_path("large/img3.jpg"), sm_path: asset_path("small/img3.jpg")})%>
+			< %= image_tag("large/img4.jpg", class: 'carousel-img', alt: 'img4', data:{ lrg_path: asset_path("large/img4.jpg"), sm_path: asset_path("small/img4.jpg")})%>
+			< %= image_tag("large/img5.jpg", class: 'carousel-img', alt: 'img5', data:{ lrg_path: asset_path("large/img5.jpg"), sm_path: asset_path("small/img5.jpg")})%>
+		</div>
+		<div id="pager"></div>
+	</div>
+</div>-->
 
 <div class="center-cards">
 	<div class="col-md-4 orb-cards">
