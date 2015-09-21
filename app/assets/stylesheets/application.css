@@ -47,9 +47,10 @@ html, body { font-family: 'Josefin Sans', sans-serif;}
 .navbar-collapse { 
 	padding: 0px;
 }
+#orb-inside-nav {float: right;}
 #orb-inside-nav > li > a {
 	color: #000000;
-	padding: 15px 30px;
+	padding: 15px 15px;
 	font-weight: bold;
 }
 #orb-inside-nav > li > a:hover, #orb-inside-nav > li > a:focus, #orb-inside-nav > li >.current-page {
@@ -59,14 +60,24 @@ html, body { font-family: 'Josefin Sans', sans-serif;}
 	background-color:rgba(0, 0, 0, 0.5);
 }
 
-.social { margin-top: 15px; }
-.social li{ 
+.social-head { 
+	border-left: 1px solid #ffffff;
+}
+.social-tail { 
+	border-right: 1px solid #ffffff;
+}
+.social { 
 	list-style: none;
 	display: inline-block;
 	float: left;
 }
-.social li .fa { margin: 0px 10px; color: #ffffff; }
-.social li .fa:hover { color: #000000; text-decoration:none;}
+.social .fa { color: #ffffff !important; }
+.social .fa:hover { 
+	color: #000000 !important; 
+	text-decoration:none;
+	background-color:rgba(255, 255, 255, 0.5) !important;
+	
+}
 
 .orb-container { 
 	margin-bottom: 30px; 
@@ -75,4 +86,7 @@ html, body { font-family: 'Josefin Sans', sans-serif;}
 	box-shadow:
 		10px 0px 10px -7px rgba(0,0,0,0.5),
 		-10px 0px 10px -7px rgba(0,0,0,0.5);
+}
+@media (max-width: 480) {
+	#orb-inside-nav {float: left;}	
 }

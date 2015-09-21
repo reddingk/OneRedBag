@@ -12,7 +12,8 @@
 	<div class="nav-container test-front">
 		<nav class="nav navbar-inverse" id="orb-main-nav" role="navigation">
 			<div class="container relative">
-				
+				<%= link_to image_tag("bw-logo.png", class:'orb-nav-logo', alt:'One Red Bag'), {controller: "home", action: "index"}, id: "logo" %>
+							
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					<span class="sr-only">Toggle navigation</span>
@@ -22,7 +23,6 @@
 					</button>
 				</div>
 				<div class="navbar-collapse collapse">
-					<%= link_to image_tag("bw-logo.png", class:'orb-nav-logo', alt:'One Red Bag'), {controller: "home", action: "index"}, id: "logo" %>
 					
 					<ul class="nav navbar-nav" id="orb-inside-nav">
 						<li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
@@ -30,11 +30,10 @@
 						<li><%= link_to "Our Story", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>	
 						<li><%= link_to "Help Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
 						<li><%= link_to "Media", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
-					</ul>
-					<ul class="social pull-right">
-						<li><a href="" class="fa fa-envelope-o fa-lg"></a></li>
-						<li><a href="" class="fa fa-facebook fa-lg"></a></li>
-						<li><a href="" class="fa fa-youtube-play fa-lg"></a></li>
+						<!--Social Icons-->
+						<li class="social social-head"><a href="" class="fa fa-envelope-o fa-lg"></a></li>
+						<li class="social"><a href="" class="fa fa-facebook fa-lg"></a></li>
+						<li class="social social-tail"><a href="" class="fa fa-youtube-play fa-lg"></a></li>
 					</ul>
 				</div>
 			</div>
