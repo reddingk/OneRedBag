@@ -1,48 +1,5 @@
 /*Home CSS*/
 
-/*Carousel*/
-#wrapper {
-	width: 100%;
-	/*position: absolute;*/
-	margin-top: 10px;
-	
-}
-.caroufredsel_wrapper {
-	display: inline-block !important;
-}
-#carousel {		
-	width: 83% !important;
-	overflow: hidden;
-	position: relative;
-	z-index: 2;
-	display: inline-block;
-}
-#carousel img {
-	width: 83% !important;
-	height: 100% !important;
-	display: block;
-	float: left;
-}
-#pager {
-	/*width: 17% !important;
-	overflow: hidden;*/
-	/*position: absolute;
-	top: 0;
-	right: 50px;*/
-
-	display: inline-block;
-}
-#pager div {
-	width: 100% !important;
-}
-#pager img {
-	cursor: pointer;
-	display: block;	
-	width: 100% !important;
-	margin-bottom: 10px;
-	float: left;
-}
-
 /*Bootstrap Carousel*/
 #myCarousel {
 	margin-top: 10px;	
@@ -55,43 +12,8 @@
 .orb-carousel { 
 	margin-top: 20px;
 }
-.transition-timer-carousel .carousel-caption {
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-	width: 100%;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	text-align: left;
-	padding-top: 5px;
-	padding-left: 15%;
-	padding-right: 15%;
-}
-.transition-timer-carousel .carousel-caption .carousel-caption-header {
-	margin-top: 10px;
-	font-size: 24px;
-}
 
-@media (min-width: 970px) {
-    /* Lower the font size of the carousel caption header so that our caption
-    doesn't take up the full image/slide on smaller screens */
-	.transition-timer-carousel .carousel-caption .carousel-caption-header {
-		font-size: 36px;
-	}
-}
-.transition-timer-carousel .carousel-indicators {
-	bottom: 0px;
-	margin-bottom: 5px;
-}
-.transition-timer-carousel .carousel-control {
-	z-index: 11;
-}
-.transition-timer-carousel .transition-timer-carousel-progress-bar {
+.preview-carousel .transition-timer-carousel-progress-bar {
     height: 5px;
     background-color: #DB4D4D; 
     width: 0%;
@@ -100,7 +22,7 @@
     z-index: 11;
     position: relative;
 }
-.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+.preview-carousel .transition-timer-carousel-progress-bar.animate{
     /* We make the transition time shorter to avoid the slide transitioning
     before the timer bar is "full" - change the 4.25s here to fit your
     carousel's transition time */
@@ -110,10 +32,91 @@
 	transition: width 4.25s linear;
 }
 
+/*Preview Thumbnails Carousel*/
+#thumbnail-preview-indicators {
+  position: relative;
+  overflow: hidden;
+}
+#thumbnail-preview-indicators .slides .slide-1, 
+#thumbnail-preview-indicators .slides .slide-2,
+#thumbnail-preview-indicators .slides .slide-3,
+#thumbnail-preview-indicators .slides .slide-4 {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#thumbnail-preview-indicators,
+#thumbnail-preview-indicators .slides,
+#thumbnail-preview-indicators .slides .slide-1, 
+#thumbnail-preview-indicators .slides .slide-2,
+#thumbnail-preview-indicators .slides .slide-3,
+#thumbnail-preview-indicators .slides .slide-4 {
+      height: 480px;
+}
+
+#thumbnail-preview-indicators .slides .slide-1 {
+  background-image: url( large/img6.jpg );
+}
+#thumbnail-preview-indicators .slides .slide-2 {
+  background-image: url( large/img7.jpg);
+}
+#thumbnail-preview-indicators .slides .slide-3 {
+  background-image: url( large/img8.jpg);
+}
+#thumbnail-preview-indicators .slides .slide-4 {
+  background-image: url( large/img9.jpg);
+}
+#thumbnail-preview-indicators .carousel-inner .item .carousel-caption {
+  top: 20%;
+  bottom: inherit;
+}
+#thumbnail-preview-indicators .carousel-indicators li,
+#thumbnail-preview-indicators .carousel-indicators li.active {
+  position: relative;
+  width: 100px;
+  height: 8px;  
+}
+#thumbnail-preview-indicators .carousel-indicators li > .thumbnail {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  display: none;
+  opacity: 0;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -50px;
+}
+#thumbnail-preview-indicators .carousel-indicators li:hover > .thumbnail,
+#thumbnail-preview-indicators .carousel-indicators li.active > .thumbnail {
+  display: block;
+  opacity: .8;
+}
+#thumbnail-preview-indicators .carousel-indicators li.active > .thumbnail:hover{
+  opacity: 1;
+}
+@media screen and (max-width : 480px) {    
+    #thumbnail-preview-indicators .carousel-indicators li,
+    #thumbnail-preview-indicators .carousel-indicators li.active {
+      width: 50px;
+      height: 8px;
+      position: relative;
+    }
+    #thumbnail-preview-indicators .carousel-indicators li > .thumbnail {
+       width: 50px;
+       left: 50%;
+       margin-top: -50px;
+       margin-left: -25px;
+    }
+}
 
 /*Slide up Box*/
 .orb-cards {
-	padding-left:0px;
+	padding:0px;
+}
+
+.orb-cards + .orb-cards { 
+	padding-left: 15px;
 }
 .center-cards {
 	margin-top: 10px;

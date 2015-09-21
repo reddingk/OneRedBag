@@ -19,10 +19,12 @@
 //= require_tree .
 
 $( document ).ready(function() {
-    //$('.carousel').carousel({ interval: 5000});
     
-     //Events that reset and restart the timer animation when the slides change
-    $("#transition-timer-carousel").on("slide.bs.carousel", function(event) {
+    //Control the Carousel interval
+    //$('.carousel').carousel({ interval: 2000});
+    
+    //Carousel animation bar 
+     $("#thumbnail-preview-indicators").on("slide.bs.carousel", function(event) {
         //The animate class gets removed so that it jumps straight back to 0%
         $(".transition-timer-carousel-progress-bar", this)
             .removeClass("animate").css("width", "0%");
@@ -34,6 +36,6 @@ $( document ).ready(function() {
     });
     
     //Kick off the initial slide animation when the document is ready
-    $(".transition-timer-carousel-progress-bar", "#transition-timer-carousel")
+    $(".transition-timer-carousel-progress-bar", "#thumbnail-preview-indicators")
         .css("width", "100%");
 });
