@@ -7,37 +7,42 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>	
-	<nav class="nav navbar-inverse" id="orb-main-nav" role="navigation">
-		<div class="container relative">
-			<div class="navbar-header">
-				<%= link_to image_tag("orb-logo.png", class:'orb-nav-logo', alt:'One Red Bag'), {controller: "home", action: "index"}, id: "logo" %>
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
+<body>
+	<div class="test-back">
+	<div class="nav-container test-front">
+		<nav class="nav navbar-inverse" id="orb-main-nav" role="navigation">
+			<div class="container relative">
+				
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse">
+					<%= link_to image_tag("bw-logo.png", class:'orb-nav-logo', alt:'One Red Bag'), {controller: "home", action: "index"}, id: "logo" %>
+					
+					<ul class="nav navbar-nav" id="orb-inside-nav">
+						<li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
+						<li><%= link_to "About Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+						<li><%= link_to "Our Story", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>	
+						<li><%= link_to "Help Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+						<li><%= link_to "Media", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+					</ul>
+					<ul class="social pull-right">
+						<li><a href="" class="fa fa-envelope-o fa-lg"></a></li>
+						<li><a href="" class="fa fa-facebook fa-lg"></a></li>
+						<li><a href="" class="fa fa-youtube-play fa-lg"></a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav" id="orb-inside-nav">
-					<li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
-					<li><%= link_to "About Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
-					<li><%= link_to "Our Story", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>	
-					<li><%= link_to "Help Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
-					<li><%= link_to "Media", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
-				</ul>
-				<ul class="social">
-					<li><a href="" class="fa fa-envelope-o fa-lg"></a></li>
-					<li><a href="" class="fa fa-facebook fa-lg"></a></li>
-					<li><a href="" class="fa fa-youtube-play fa-lg"></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container orb-container">
+		</nav>
+	</div>
+	<div class="container orb-container test-front">
 		<%= yield %>
 	</div>
-
+	</div>
 </body>
 </html>

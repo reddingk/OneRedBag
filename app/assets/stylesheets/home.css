@@ -11,6 +11,7 @@
 /*Custom Bootstrap Carousel*/
 .orb-carousel { 
 	margin-top: 20px;
+	margin-bottom: 30px;
 }
 
 .preview-carousel .transition-timer-carousel-progress-bar {
@@ -127,6 +128,7 @@
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
+	margin-bottom: 10px;
 }
 .card-back {
 	background-color:#E0E0E0;
@@ -135,7 +137,7 @@
 	padding: 20px;
 	text-align: center;
 }
-
+.card-back i { color: #000000;}
 .card-front {
 	background-color: #000000;
 	padding: 10px;
@@ -156,76 +158,20 @@
 	font-weight: bold;
 	margin-bottom: 5px;
 	color: #DB4D4D;
+	text-align: center;
 }
 .card-front p { color: #ffffff;}
 
 @media (min-width: 768px) {
-	#wrapper {
-		width: 750px !important;
-		height: 342px !important;
-	}
-	#carousel, #carousel img {
-		width: 624px !important; /*624-567*/
-		height: 342px !important; /*352-320*/
-	}
-	#pager {
-		width: 113px;
-		height: 342px;
-	}
-	#pager div {
-		height: 90px;
-		width: 113px;
-	}
-	#pager img {
-		height: 80px;
-		width: 113px;		
-	}
+	
 }
 
 @media (min-width: 992px) {
-	#wrapper {
-		width: 970px !important;
-		height: 428px !important;
-	}
-	#carousel, #carousel img {
-		width: 760px !important;/*808*/
-		height: 428px !important;/*455*/
-	}
-	#pager {
-		width: 146px;
-		height: 428px;
-	}
-	#pager div {
-		height: 117px;
-		width: 146px;
-	}
-	#pager img {
-		height: 107px;
-		width: 146px;		
-	}
+
 }
 
 @media (min-width: 1200px) {
-	#wrapper{
-		width: 1170px !important;
-		height: 524px !important;
-	}
-	#carousel, #carousel img {
-		width: 930px !important;/*975*/
-		height: 524px !important;/*549*/
-	}
-	#pager {
-		width: 177px;
-		height: 524px;
-	}
-	#pager div {
-		height: 141px;
-		width: 177px;
-	}
-	#pager img {
-		height: 131px;
-		width: 177px;		
-	}
+	
 }
 
 
