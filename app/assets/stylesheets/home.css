@@ -10,7 +10,7 @@
 
 /*Custom Bootstrap Carousel*/
 .orb-carousel { 
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-bottom: 30px;
 }
 
@@ -111,6 +111,34 @@
     }
 }
 
+/*Bag Count Box*/
+.bg-count-wrapper {
+  background-color: #DB4D4D;
+  padding: 15px;
+  margin-bottom:30px;
+  /*margin: 0px -8%;*/
+}
+.bg-count-text { 
+  display: inline-block;
+  padding: 15px 30px;
+  border-right: 1px solid #ffffff;
+  width: 50%;
+  text-align: left;
+  color: #ffffff;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight:bold;
+}
+.bg-count-number { 
+  display: inline-block;
+  padding: 15px;
+  width: 49%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 70px;
+  font-weight:bold;
+}
+.bg-count-number span { font-size: 30px;}
 /*Slide up Box*/
 .orb-cards {
 	padding:0px;
@@ -120,18 +148,18 @@
 	padding-left: 15px;
 }
 .center-cards {
-	margin-top: 10px;
+	margin-top: 0px;
 }
 .card {
 	width: 100%;
-	height: 200px;
+	height: 500px;
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
 	margin-bottom: 10px;
 }
 .card-back {
-	background-color:#E0E0E0;
+	background-color:#FCFCFC;
 	height: 100%;
 	width: 100%;
 	padding: 20px;
@@ -139,13 +167,13 @@
 }
 .card-back i { color: #000000;}
 .card-front {
-	background-color: #000000;
+	background-color: #303030;/*#DB4D4D;*/
 	padding: 10px;
 	position: absolute;
 	bottom: -135px;
 	height:100%;
 	width: 100%;
-	border-top:7px solid #DB4D4D;
+	border-top:7px solid #000000;
 	
 	transition: all 0.5s ease;
 }
@@ -161,7 +189,12 @@
 	text-align: center;
 }
 .card-front p { color: #ffffff;}
-
+.more-links { 
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  color: #ffffff;
+}
 @media (min-width: 768px) {
 	
 }

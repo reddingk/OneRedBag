@@ -14,78 +14,121 @@
  *= require_self
  */
 /*Entire Site*/
-html, body { font-family: 'Josefin Sans', sans-serif;}
+html, body { 
+	/*font-family: 'Josefin Sans', sans-serif;*/
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+body { 
+	padding-top: 142px; 
+}
+.main-back {
+	background-color: #EFEFEF;
+}
 
-.test-back {
+.nav-top { 
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0px;
 	background-color: #ffffff;
 }
-.test-front {
-	background-color: #E0E0E0;
+/*Social*/
+.follow-us { display: inline-block;}
+.follow-us span { 
+	border-right: 1px solid #000000;
 }
-/*Navigation*/
-.nav-container {
+/*Header Logo*/
+.header-logo{ 
+	display: inline-block;
+	position: relative; 
+    width: 200px;
+    text-align: center;
+}
+.logo-text { 
+	font-size: 26px; 
+	position: absolute;
+	top: 20px;
+	width: 100%;
+}
+.logo-red-text { 
+	color: #DB4D4D;
+}
+.logo-icon { 
+	height: 70px;
+	opacity: 0.4;
+}
 
+/*Navigation*/
+.nav-container { 
+	position: fixed;
+	top: 0;
+  	left: 0;
+  	z-index: 100;
+  	width: 100%;
 }
 .nav-logo { 
 	/*max-height: 80px;
 	text-align: center;*/
 }
 .orb-nav-logo{ height: 40px; float:left; margin: 3px 0px;}
-.orb-nav-logo:hover { 
-	filter: invert(100%); 
-	-webkit-filter: invert(100%);
-}
 
 #orb-main-nav {	
-	background-color: #DB4D4D; 
-	/*background-image: url( orb-logo.png);
-	background-repeat: no-repeat;
-	background-size: 120px 70px;
-	background-position: 70% 20%;*/
+	background-color: #ffffff; 
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	/*#DB4D4D; */
 }
 .relative { position: relative; }
 .navbar-collapse { 
 	padding: 0px;
 }
-#orb-inside-nav {float: right;}
+#orb-inside-nav { 
+	display:table;
+	width: 100%;
+}
+#orb-inside-nav li { 
+	display: table-cell;
+	width: 16.667%;
+}
+
 #orb-inside-nav > li > a {
 	color: #000000;
 	padding: 15px 15px;
 	font-weight: bold;
+	text-align: center;
+	font-size: 18px;
 }
-#orb-inside-nav > li > a:hover, #orb-inside-nav > li > a:focus, #orb-inside-nav > li >.current-page {
-	color: #ffffff;
+#orb-inside-nav > li > a:hover, #orb-inside-nav > li > a:focus {
+	/*color: #ffffff;*/
 	font-weight: bold;
-	/*background-color: #000000;*/
-	background-color:rgba(0, 0, 0, 0.5);
+	background-color: #000000;
+	background-color:rgba(219, 77, 77, 0.7);
+}
+#orb-inside-nav > li >.current-page { 
+	color: #DB4D4D;
 }
 
-.social-head { 
-	border-left: 1px solid #ffffff;
-}
-.social-tail { 
-	border-right: 1px solid #ffffff;
-}
 .social { 
-	list-style: none;
-	display: inline-block;
-	float: left;
+	width: 5.333% !important;
 }
-.social .fa { color: #ffffff !important; }
+.social .fa { color: #DB4D4D !important; }
 .social .fa:hover { 
 	color: #000000 !important; 
 	text-decoration:none;
 	background-color:rgba(255, 255, 255, 0.5) !important;
-	
 }
 
+.container {
+	padding-left:0px !important;
+	padding-right:0px !important;
+}
 .orb-container { 
 	margin-bottom: 30px; 
-	border-left: 1px solid #E0E0E0;
+	/*border-left: 1px solid #E0E0E0;
 	border-right: 1px solid #E0E0E0;
-	box-shadow:
+	/*box-shadow:
 		10px 0px 10px -7px rgba(0,0,0,0.5),
-		-10px 0px 10px -7px rgba(0,0,0,0.5);
+		-10px 0px 10px -7px rgba(0,0,0,0.5);*/
 }
 @media (max-width: 480) {
 	#orb-inside-nav {float: left;}	

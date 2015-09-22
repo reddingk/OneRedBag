@@ -3,17 +3,25 @@
 <head>
   <title>One Red Bag</title>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-	<div class="test-back">
-	<div class="nav-container test-front">
+	<div class="main-back">
+	<div class="nav-container">
+		<div class="nav-top">
+			<div class="header-logo">
+				<%= image_tag("bw-logo.png", class:'logo-icon', alt:'One Red Bag') %>
+				<div class="logo-text">ONE <span class="logo-red-text">RED</span> BAG</div>
+			</div>
+		</div>
+		
 		<nav class="nav navbar-inverse" id="orb-main-nav" role="navigation">
 			<div class="container relative">
-				<%= link_to image_tag("bw-logo.png", class:'orb-nav-logo', alt:'One Red Bag'), {controller: "home", action: "index"}, id: "logo" %>
-							
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 					<span class="sr-only">Toggle navigation</span>
@@ -23,7 +31,6 @@
 					</button>
 				</div>
 				<div class="navbar-collapse collapse">
-					
 					<ul class="nav navbar-nav" id="orb-inside-nav">
 						<li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
 						<li><%= link_to "About Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
@@ -31,15 +38,16 @@
 						<li><%= link_to "Help Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
 						<li><%= link_to "Media", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
 						<!--Social Icons-->
-						<li class="social social-head"><a href="" class="fa fa-envelope-o fa-lg"></a></li>
+						<li class="social"><a href="" class="fa fa-envelope-o fa-lg"></a></li>
 						<li class="social"><a href="" class="fa fa-facebook fa-lg"></a></li>
-						<li class="social social-tail"><a href="" class="fa fa-youtube-play fa-lg"></a></li>
+						<li class="social"><a href="" class="fa fa-youtube-play fa-lg"></a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
-	<div class="container orb-container test-front">
+	
+	<div class="container orb-container main-front">
 		<%= yield %>
 	</div>
 	</div>
