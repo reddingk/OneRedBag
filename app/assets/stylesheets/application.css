@@ -133,3 +133,48 @@ body {
 @media (max-width: 480) {
 	#orb-inside-nav {float: left;}	
 }
+
+/*Footer*/
+
+.orb-footer { 
+	background-color: #000000;
+	min-height: 200px;
+	padding: 15px 0px;
+}
+.orb-footer-container { 
+	max-width: 1170px;
+	margin: 0px auto;
+}
+
+.orb-footer > div > div {
+	margin: 0px 20px;
+}
+.orb-footer > .orb-footer-container > div + div {
+	border-left: 1px solid #ffffff;
+}
+.orb-footer > .orb-footer-container > div > a {
+	display: block;
+	color:  #DB4D4D;
+}
+.orb-footer > .orb-footer-container > div > a:hover { 
+	text-decoration: none;
+	color: #E0E0E0;
+}
+.orb-footer > .orb-footer-container > div > span { 
+	color: #E0E0E0;
+}
+.orb-footer > .orb-footer-container > div > .fa {
+	display: inline-block;
+	padding: 5px 20px 5px 0px;
+	color:  #DB4D4D;
+}
+
+.footer-title {
+	color: #ffffff;
+	font-weight:bold;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.title2 { 
+	margin-top: 20px;
+}
