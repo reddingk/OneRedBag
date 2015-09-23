@@ -11,70 +11,73 @@
 </head>
 
 <body>
-	<div class="main-back">
-	<div class="nav-container">
-		<div class="nav-top">
-			<div class="header-logo">
-				<%= image_tag("bw-logo.png", class:'logo-icon', alt:'One Red Bag') %>
-				<div class="logo-text">ONE <span class="logo-red-text">RED</span> BAG</div>
+	<div class="wrapper">
+		<!--Header-->
+		<div class="nav-container">
+			<div class="nav-top">
+				<div class="header-logo">
+					<%= image_tag("bw-logo.png", class:'logo-icon', alt:'One Red Bag') %>
+					<div class="logo-text">ONE <span class="logo-red-text">RED</span> BAG</div>
+				</div>
 			</div>
+			
+			<nav class="nav navbar-inverse" id="orb-main-nav" role="navigation">
+				<div class="container relative">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav" id="orb-inside-nav">
+							<li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
+							<li><%= link_to "About Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li><%= link_to "Our Story", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>	
+							<li><%= link_to "Help Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li><%= link_to "Media", {controller: "media", action: "index"}, class: "#{cp({controller: "media", action: "index"})}" %></li>
+							<!--Social Icons-->
+							<li class="social"><a href="" class="fa fa-envelope-o fa-lg"></a></li>
+							<li class="social"><a href="" class="fa fa-facebook fa-lg"></a></li>
+							<li class="social"><a href="" class="fa fa-youtube-play fa-lg"></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!--Body-->
+		<div class="container orb-container main-front">
+			<%= yield %>
 		</div>
 		
-		<nav class="nav navbar-inverse" id="orb-main-nav" role="navigation">
-			<div class="container relative">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					</button>
+		
+		<!--Footer-->
+		<div class="orb-footer">
+			<div class="orb-footer-container">
+				<div class="col-md-4">
+					<div class="footer-title">Navigate</div>
+					<%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %>
+					<a href="">About</a>
+					<a href="">Our Story</a>
+					<a href="">Help Us</a>
+					<%= link_to "Media", {controller: "media", action: "index"}, class: "#{cp({controller: "media", action: "index"})}" %>
 				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav" id="orb-inside-nav">
-						<li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
-						<li><%= link_to "About Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
-						<li><%= link_to "Our Story", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>	
-						<li><%= link_to "Help Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
-						<li><%= link_to "Media", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
-						<!--Social Icons-->
-						<li class="social"><a href="" class="fa fa-envelope-o fa-lg"></a></li>
-						<li class="social"><a href="" class="fa fa-facebook fa-lg"></a></li>
-						<li class="social"><a href="" class="fa fa-youtube-play fa-lg"></a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
-	
-	<div class="container orb-container main-front">
-		<%= yield %>
-	</div>
-	</div>
-	
-	<div class="orb-footer">
-		<div class="orb-footer-container">
-			<div class="col-md-4">
-				<div class="footer-title">Navigate</div>
-				<a href="">Home</a>
-				<a href="">About</a>
-				<a href="">Our Story</a>
-				<a href="">Help Us</a>
-				<a href="">Media</a>
-			</div>
-			
-			<div class="col-md-4">
-				<div class="footer-title">Follow us</div>
-				<a href="" class="fa fa-envelope-o fa-lg"></a>
-				<a href="" class="fa fa-facebook fa-lg"></a>
-				<a href="" class="fa fa-youtube-play fa-lg"></a>
-				<a href="" class="fa fa-instagram fa-lg"></a>
 				
-				<div class="footer-title title2">Contact us</div>
-				<span>1ReddBagg@gmail.com</span>
-			</div>
-			
-			<div class="col-md-4">
+				<div class="col-md-4">
+					<div class="footer-title">Follow us</div>
+					<a href="" class="fa fa-envelope-o fa-lg"></a>
+					<a href="" class="fa fa-facebook fa-lg"></a>
+					<a href="" class="fa fa-youtube-play fa-lg"></a>
+					<a href="" class="fa fa-instagram fa-lg"></a>
+					
+					<div class="footer-title title2">Contact us</div>
+					<span>1ReddBagg@gmail.com</span>
+				</div>
+				
+				<div class="col-md-4">
+				</div>
 			</div>
 		</div>
 	</div>

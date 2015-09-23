@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'media/index'
+
 #CMS
   get 'c1_m2_s3/index'
   get 'c1_m2_s3/edit'
@@ -8,5 +10,8 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
   get 'home/construction'
+  
+#Media
+  get 'media/index'
 
 end

@@ -8,3 +8,8 @@
 	<% @meetup.each do |meets| %>
 		<p><%= meets["date"] %> | <%= meets["title"] %> | <%= meets["time"] %> | <%= meets["location"] %>
 	<% end %>
+	
+<p><b>Test </b></p>
+	<% @p_test.each do |t_items| %>
+		<p><%= t_items.split('/').last %></p>
+	<% end %>

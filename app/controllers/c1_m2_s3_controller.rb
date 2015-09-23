@@ -14,6 +14,13 @@ class C1M2S3Controller < ApplicationController
 		@meetup << meets
 	end
 	
+	@publictest = Dir.glob("public/Photos/*")
+	@p_test = []
+	@publictest.each do |tests|
+		@p_test << tests
+	end
+	
+	
 	render layout: "c1m2s3"
   end
 

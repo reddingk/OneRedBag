@@ -71,7 +71,7 @@
 </div>
 <div class="bg-count-wrapper">
 	<div class="bg-count-text">Feeding Those In Need<br />1 Bag At A Time</div>
-	<div class="bg-count-number">350 <span>bags</span></div>
+	<div class="bg-count-number"><%= @bagcount %> <span>bags</span></div>
 </div>
 <!--Center Cards -->
 <div class="center-cards">
@@ -106,7 +106,7 @@
 				<div class="card-back"><i class="fa fa-newspaper-o fa-5x"></i></div>
 				<div class="card-front">
 					<h3>News</h3>
-					<p>Recent News</p>
+					<p><%= @newsitem["content"] %></p>
 					<div class="more-links">More News <i class="fa fa-chevron-right"></i></div>
 				</div>
 			</div>
