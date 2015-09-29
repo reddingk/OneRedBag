@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require carouFredSel-6.js
 //= require home.js
+//= require c1_m2_s3.js
 //= require_tree .
 
 $( document ).ready(function() {

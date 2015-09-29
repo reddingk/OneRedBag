@@ -9,12 +9,12 @@
 		<th></th>
 	</tr>
 	<% @items.each do |item| %>
-		<% @itemnum = @itemnum + 1%>
 		<tr>
 			<td><%= item["date"] %></td>
 			<td><%= item["title"] %></td>
 			<td><button class="btn btn-default" data-toggle="modal" data-target="#editmodal-<%= @itemnum %>">Edit</button></td>
 		</tr>
+		<% @itemnum = @itemnum + 1%>
 	<% end %>
 	<tr>
 		<td><button class="btn btn-default" data-toggle="modal" data-target="#addmodal">+ Add <%= @pagename%> item</button></td>
@@ -23,23 +23,48 @@
 
 <% @itemnum = 0 %>
 <% @items.each do |item| %>
-	<% @itemnum = @itemnum + 1%>
 	<!--Modals with Id -->
 	<div class="modal fade" id="editmodal-<%= @itemnum %>" tabindex="-1" role="dialog" aria-labelledby="editmodal-<%= @itemnum %>" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="editmodal-<%= @itemnum %>">Edit <%= item["title"]%></h4>
-			        </div>
+					<h4 class="modal-title" id="editmodal-<%= @itemnum %>">Edit: <%= item["title"]%> #<%= @itemnum %></h4>
+			    </div>
 				<div class="modal-body">
-					TEST
+					<table>
+						<tr>
+							<td><label>Date:</label></td>
+							<td><input type="date" id="<%= @pagename%>-item-date-<%= @itemnum %>" value=<%= item["date"]%> /></td>
+						</tr>
+						<tr>
+							<td><label>Title</label></td>
+							<td><input id="<%= @pagename%>-item-title-<%= @itemnum %>" value="<%= item["title"]%>" /></td>
+						</tr>
+						<% if @pagename == "meetup" %>
+							<tr>
+								<td><label>Location:</label></td>
+								<td><textarea id="<%= @pagename%>-item-location-<%= @itemnum %>"><%= item["location"]%></textarea></td>
+							</tr>
+							<tr>
+								<td><label>Time:</label></td>
+								<td><input type="time" id="<%= @pagename%>-item-time-<%= @itemnum %>" value=<%= item["time"]%> /></td>
+							</tr>
+						<% else %>
+							<tr>
+								<td><label>Content:</label></td>
+								<td><textarea id="<%= @pagename%>-item-content-<%= @itemnum %>"><%= item["content"]%></textarea></td>
+							</tr>
+						<% end %>
+					</table>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-			        </div>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="<%= @pagename%>-close-<%= @itemnum %>">Close</button>
+					<a href="javascript: cmssave('<%= @pagename%>', <%= @itemnum %>);" type="button" class="btn btn-primary" id="<%= @pagename%>-save-<%= @itemnum %>">Save Changes</a>
+			    </div>
 			</div>
 		</div>
 	</div>
+	<% @itemnum = @itemnum + 1%>
 <% end %>
 
 <!--Modal for Add Pagename -->

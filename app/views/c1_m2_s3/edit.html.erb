@@ -26,15 +26,15 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h4 class="modal-title" id="bagcountmodal">Edit Bag Count</h4>
-		        </div>
+		    </div>
 			<div class="modal-body">				
 				<label>Bag Count: </label>
-				<input value= <%= @bagcount %> />
+				<input id="bag-count" value= <%= @bagcount %> />
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save Changes</button>
-		        </div>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="bag-count-close">Close</button>
+				<a href="javascript: cmssave('bag-count', 0);" type="button" class="btn btn-primary" id="bag-count-save">Save Changes</a>
+		    </div>
 		</div>
 	</div>
 </div>

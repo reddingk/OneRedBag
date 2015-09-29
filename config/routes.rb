@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'c1_m2_s3/index'
   get 'c1_m2_s3/edit'
   get 'c1_m2_s3/item_list'
+  post 'c1_m2_s3/dataupdate'
 
 #HOME
   get 'home/index'
