@@ -96,4 +96,39 @@ class C1M2S3Controller < ApplicationController
 		render :text => "COMPLETE"
   end
   
+  ##Add new item
+  def datanew
+  	@jfile = File.read(Rails.public_path+"info.json")	
+		@jdata = JSON.parse(@jfile)
+  	
+  	@type = params[:type]
+  		
+  	if @type == "newsfeed"
+			@newsid = params[:id]
+			@newsdate = params[:date]
+			@newstitle = params[:title]
+			@newscontent = params[:content]
+			
+			@jdata["newsfeed"][@newsid.to_f]["date"] = @newsdate
+			@jdata["newsfeed"][@newsid.to_f]["title"] = @newstitle
+			@jdata["newsfeed"][@newsid.to_f]["content"] = @newscontent
+			
+		elsif @type == "meetup"
+			@meetid = params[:id]
+			@meetdate = params[:date]
+			@meettitle = params[:title]
+			@meetlocation = params[:location]
+			@meettime = params[:time]
+			
+			@jdata["meetup"][@meetid.to_f]["date"] = @meetdate
+			@jdata["meetup"][@meetid.to_f]["title"] = @meettitle
+			@jdata["meetup"][@meetid.to_f]["location"] = @meetlocation
+			@jdata["meetup"][@meetid.to_f]["time"] = @meettime
+			
+		end
+		
+		
+  	render :text => "ADDED CORRECTLY"
+  end
+  
 end

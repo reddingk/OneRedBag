@@ -73,13 +73,38 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<h4 class="modal-title" id="addmodal">Add <%= @pagename %></h4>
-		        </div>
+		    </div>
 			<div class="modal-body">
-				TEST
+				<table>
+					<tr>
+						<td><label>Date:</label></td>
+						<td><input type="date" id="<%= @pagename%>-item-date-new" value="" /></td>
+					</tr>
+					<tr>
+						<td><label>Title</label></td>
+						<td><input id="<%= @pagename%>-item-title-new" value="" /></td>
+					</tr>
+					<% if @pagename == "meetup" %>
+						<tr>
+							<td><label>Location:</label></td>
+							<td><textarea id="<%= @pagename%>-item-location-new"></textarea></td>
+						</tr>
+						<tr>
+							<td><label>Time:</label></td>
+							<td><input type="time" id="<%= @pagename%>-item-time-new" value="" /></td>
+						</tr>
+					<% else %>
+						<tr>
+							<td><label>Content:</label></td>
+							<td><textarea id="<%= @pagename%>-item-content-new"></textarea></td>
+						</tr>
+					<% end %>
+				</table>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-		        </div>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="<%= @pagename%>-close-new">Close</button>
+				<a href="javascript: cmsnew('<%= @pagename%>');" type="button" class="btn btn-primary" id="<%= @pagename%>-save-new">Add</a>
+		    </div>
 		</div>
 	</div>
 </div>
