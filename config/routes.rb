@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
-  get 'media/index'
 
 #CMS
-  get 'c1_m2_s3/index'
-  get 'c1_m2_s3/edit'
-  get 'c1_m2_s3/item_list'
+  get '_scrap', to: 'c1_m2_s3#index'
+  get '_edit_or', to: 'c1_m2_s3#edit'
+  get '_items_edit',to: 'c1_m2_s3#item_list'
   post 'c1_m2_s3/dataupdate'
   post 'c1_m2_s3/datanew'
   post 'c1_m2_s3/lockcheck'
 
 #HOME
-  get 'home/index'
+  get 'Home', to:'home#index'
   root 'home#index'
-  get 'home/construction'
+  get 'under-construction',to:'home#construction'
   
 #Media
-  get 'media/index'
+  get 'Media', to: 'media#index'
+  
 
 end

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<%= link_to "One Red Bag", "#", id: "logo" %>	
+	<%= link_to "One Red Bag", {controller: "home", action: "index"}, id: "logo" %>	
 	<div class="orb-container">
 		<%= yield %>
 	</div>

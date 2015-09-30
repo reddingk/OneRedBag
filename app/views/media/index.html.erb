@@ -21,7 +21,8 @@
 		%>
         <a class="photo-section-link col-md-4" data-toggle="modal" data-target="#Modal-<%= album.split('/').last %>">
             <div class="photo-cover">
-                <div><i class="fa fa-picture-o"></i> <%= album.split('/').last %> <p>(<%= @photos.count %>)</p></div>
+                <%= image_tag( album.split('/').last + "/" + @photos[0].split('/').last , size:"220x100" ,class: 'back-photo-img', alt: 'album cover' ) %>
+                <div class="back-text"><span><i class="fa fa-picture-o"></i> <%= album.split('/').last %><br/>(<%= @photos.count %>)</span></div>
             </div>
         </a>
         
