@@ -1,0 +1,9 @@
+.key-response { 
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.key-response .wrong-pwd, .key-response .right-pwd { 
+    display: none; 
+    font-size: 18px !important;
+}

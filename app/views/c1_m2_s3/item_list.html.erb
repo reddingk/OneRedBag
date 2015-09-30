@@ -6,13 +6,13 @@
 	<tr>
 		<th>Date</th>
 		<th>Title</th>
-		<th></th>
+		<th>Key: <input type="password" id="edit-key" onkeyup="keycheck()"/> <div class="key-response"> <i class="fa fa-times-circle wrong-pwd"></i> <i class="fa fa-check-circle-o right-pwd"></i></div></th>
 	</tr>
 	<% @items.each do |item| %>
 		<tr>
 			<td><%= item["date"] %></td>
 			<td><%= item["title"] %></td>
-			<td><button class="btn btn-default" data-toggle="modal" data-target="#editmodal-<%= @itemnum %>">Edit</button></td>
+			<td><button class="btn btn-default cms-edit-btn" data-toggle="modal" data-target="#editmodal-<%= @itemnum %>" disabled>Edit</button></td>
 		</tr>
 		<% @itemnum = @itemnum + 1%>
 	<% end %>

@@ -3,12 +3,12 @@
 <table class="table">
 	<tr>
 		<th>Section</th>
-		<th></th>
+		<th>Key: <input type="password" id="edit-key" onkeyup="keycheck()"/><div class="key-response"> <i class="fa fa-times-circle wrong-pwd"></i> <i class="fa fa-check-circle-o right-pwd"></i></div> </th>
 	</tr>
 
 	<tr>
 		<td>bagcount</td>
-		<td><button class="btn btn-default" data-toggle="modal" data-target="#bagcountmodal">Edit</button></td>
+		<td><button class="btn btn-default cms-edit-btn" data-toggle="modal" data-target="#bagcountmodal" disabled>Edit</button></td>
 	</tr>
 	<tr>
 		<td>News Feed</td>
