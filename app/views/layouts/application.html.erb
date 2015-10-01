@@ -36,7 +36,7 @@
 							<li><%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %></li>
 							<li><%= link_to "News", {controller: "news", action: "index"}, class: "#{cp({controller: "news", action: "index"})}" %></li>
 							<li><%= link_to "Our Story", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>	
-							<li><%= link_to "Help Us", {controller: "home", action: "construction"}, class: "#{cp({controller: "home", action: "construction"})}" %></li>
+							<li><%= link_to "Help Us", {controller: "helpus", action: "index"}, class: "#{cp({controller: "helpus", action: "index"})}" %></li>
 							<li><%= link_to "Media", {controller: "media", action: "index"}, class: "#{cp({controller: "media", action: "index"})}" %></li>
 							<!--Social Icons-->
 							<li class="social"><a href="" class="fa fa-envelope-o fa-lg"></a></li>
@@ -61,7 +61,7 @@
 					<%= link_to "Home", {controller: "home", action: "index"}, class: "#{cp({controller: "home", action: "index"})}" %>
 					<%= link_to "News", {controller: "news", action: "index"}, class: "#{cp({controller: "news", action: "index"})}" %>
 					<a href="">Our Story</a>
-					<a href="">Help Us</a>
+					<%= link_to "Help Us", {controller: "helpus", action: "index"}, class: "#{cp({controller: "helpus", action: "index"})}" %>
 					<%= link_to "Media", {controller: "media", action: "index"}, class: "#{cp({controller: "media", action: "index"})}" %>
 				</div>
 				

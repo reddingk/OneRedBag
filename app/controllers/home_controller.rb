@@ -5,5 +5,6 @@ class HomeController < ApplicationController
 	  @bagcount = @jdata["bagcount"]
 	  
 	  @newsitem = @jdata["newsfeed"].sort_by { |hash| [Date.today - hash['date'].to_date] }[0]
+	  
   end
 end

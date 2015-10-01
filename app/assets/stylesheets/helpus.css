@@ -1,0 +1,54 @@
+.helpus-wrapper {
+    margin-top: 20px;
+}
+
+.helpus-cover img{
+    width: 100%;
+    height: 300px;
+}
+
+.helpus-cover-txt {
+    background-color: #ffffff;
+    padding: 30px;
+}
+
+.helpus-title { 
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+} 
+
+.helpus-content {
+    font-size: 20px;
+}
+
+.helpus-cards {
+    margin-top:30px;
+}
+.helpus-card:hover .helpus-card-txt {
+    background-color: #DB4D4D;
+    color: #ffffff;
+}
+
+.helpus-card-cover img { 
+    width: 100%;
+    height: 250px;
+}
+
+.helpus-card-txt {
+    margin-top: 10px;
+    background-color: #ffffff;
+    padding: 30px;
+    
+    transition: all 0.5s ease;
+}
+
+.helpus-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.helpus-card-content { 
+    font-size: 16px;
+    line-height: 28px;
+}

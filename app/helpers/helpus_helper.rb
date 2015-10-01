@@ -1,0 +1,2 @@
+module HelpusHelper
+end

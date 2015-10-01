@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   get 'Media', to: 'media#index'
 
 #News
+  ##get 'news/index' => 'news#index', :as => :news_path
   get 'News', to: 'news#index'
-
+  
+##Help Us
+  get 'HelpUs', to: 'helpus#index'
+  
 end
