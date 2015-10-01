@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '_scrap', to: 'c1_m2_s3#index'
   get '_edit_or', to: 'c1_m2_s3#edit'
   get '_items_edit',to: 'c1_m2_s3#item_list'
+  
   post 'c1_m2_s3/dataupdate'
   post 'c1_m2_s3/datanew'
   post 'c1_m2_s3/lockcheck'
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
   
 #Media
   get 'Media', to: 'media#index'
-  
+
+#News
+  get 'News', to: 'news#index'
 
 end

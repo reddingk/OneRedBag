@@ -42,7 +42,9 @@ class C1M2S3Controller < ApplicationController
 	@jdata = JSON.parse(@jfile)
 	
 	@items = []
-	@jdata[@pagename].each do |pageitem|
+	
+	@sortedpage = @jdata[@pagename].sort_by { |hash| [Date.today - hash['date'].to_date] }
+	@sortedpage.each do |pageitem|
 		@items << pageitem
 	end
 	render layout: "c1m2s3"

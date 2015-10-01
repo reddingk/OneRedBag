@@ -11,7 +11,7 @@ function cmssave(identifier, item_num) {
         $.ajax(
             {
                 type: "POST",
-                url:'dataupdate',
+                url:'/c1_m2_s3/dataupdate',
                 dataType: "text",
                 data: $.param({type: "bag", value: bagvalue }),
                 success:function(status) {
@@ -36,7 +36,7 @@ function cmssave(identifier, item_num) {
         $.ajax(
             {
                 type: "POST",
-                url:'dataupdate',
+                url:'/c1_m2_s3/dataupdate',
                 dataType: "text",
                 data: $.param({type: "newsfeed", id: newsid, date: newsdate, title: newstitle, content: newscontent }),
                 success:function(status) {
@@ -62,7 +62,7 @@ function cmssave(identifier, item_num) {
         $.ajax(
             {
                 type: "POST",
-                url:'dataupdate',
+                url:'/c1_m2_s3/dataupdate',
                 dataType: "text",
                 data: $.param({type: "meetup", id: meetid, date: meetdate, title: meettitle, location: meetlocation, time: meettime }),
                 success:function(status) {
@@ -97,7 +97,7 @@ function cmsnew(identifier) {
             $.ajax(
                 {
                     type: "POST",
-                    url:'datanew',
+                    url:'/c1_m2_s3/datanew',
                     dataType: "text",
                     data: $.param({type: "newsfeed", date: newsdate, title: newstitle, content: newscontent }),
                     success:function(status) {
@@ -131,7 +131,7 @@ function cmsnew(identifier) {
             $.ajax(
                 {
                     type: "POST",
-                    url:'datanew',
+                    url:'/c1_m2_s3/datanew',
                     dataType: "text",
                     data: $.param({type: "meetup", date: meetdate, title: meettitle, location: meetlocation, time: meettime }),
                     success:function(status) {
@@ -156,7 +156,7 @@ function keycheck() {
     $.ajax(
         {
             type: "POST",
-            url:'lockcheck',
+            url:'/c1_m2_s3/lockcheck',
             dataType: "text",
             data: $.param({type: "meetup", pwd: $('#edit-key').val() }),
             success:function(status) {

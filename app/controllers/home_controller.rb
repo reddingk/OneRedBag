@@ -4,6 +4,6 @@ class HomeController < ApplicationController
   	@jdata = JSON.parse(@jfile)
 	  @bagcount = @jdata["bagcount"]
 	  
-	  @newsitem = @jdata["newsfeed"][0]
+	  @newsitem = @jdata["newsfeed"].sort_by { |hash| [Date.today - hash['date'].to_date] }[0]
   end
 end
