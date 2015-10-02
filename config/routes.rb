@@ -23,5 +23,6 @@ Rails.application.routes.draw do
   
 ##Help Us
   get 'HelpUs', to: 'helpus#index'
+  get 'helpus/getdates'
   
 end

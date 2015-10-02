@@ -16,7 +16,11 @@
 //= require bootstrap-sprockets
 //= require carouFredSel-6.js
 //= require home.js
+//= require helpus.js
 //= require c1_m2_s3.js
+//= require moment
+//= require underscore
+//= require clndr-rails
 //= require_tree .
 
 $( document ).ready(function() {

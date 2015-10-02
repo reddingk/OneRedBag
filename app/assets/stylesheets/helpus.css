@@ -52,3 +52,79 @@
     font-size: 16px;
     line-height: 28px;
 }
+
+/*Calender Style*/
+#full-clndr { 
+    width: 100%;
+    border-top:1px solid #000000;
+    padding-top:10px;
+    margin-top: 10px;
+}
+
+#full-clndr .clndr .clndr-controls div { 
+    display: inline-block;  
+}
+
+#full-clndr .clndr .clndr-controls .month { 
+    margin: 0px 10px;
+    font-weight: bold;
+    width:40%;
+    text-align: center;
+}
+#full-clndr .clndr .clndr-controls .clndr-control-button {
+    cursor: pointer;
+    width: 24%;
+}
+.rightalign {text-align:right; }
+
+#full-clndr .clndr .clndr-table { 
+    width: 100%;
+}
+
+#full-clndr .clndr .clndr-table thead { 
+    background-color: #DB4D4D;
+}
+.header-day, .day { 
+    text-align: center;
+}
+
+#full-clndr .clndr .clndr-table tbody tr { 
+    background-color: #cccccc;
+    border-bottom: 2px solid #ffffff;
+}
+
+.event .day-contents { 
+    border-bottom: 1px solid #000000;
+    font-weight: bold;
+    background-color: #DB4D4D;
+    color: #000000;
+    cursor: pointer;
+}
+
+.event-list { 
+    margin-top: 10px;
+}
+
+.event-title { 
+    background-color: #DB4D4D;
+    text-align: center;
+    font-weight: bold;
+}
+
+.event-list table { 
+    width: 100%;
+}
+.event-list table tbody tr td { padding: 7px 7px; }
+.event-info div { 
+    line-height:17px;
+    font-weight: bold;
+}
+.event-info div span { 
+    font-size: 12px;
+}
+.event-info div + div { font-weight: normal;}
+
+.selected { 
+    background-color: #cccccc;
+    color: #000000;
+}

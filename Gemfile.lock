@@ -44,6 +44,12 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    clndr-rails (1.2.10.1)
+      jquery-rails
+      momentjs-rails
+      rails (~> 4.2.0)
+      railties (~> 4.2.0)
+      underscore-rails
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -74,6 +80,8 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.6.1)
     minitest (5.7.0)
+    momentjs-rails (2.10.3)
+      railties (>= 3.1)
     multi_json (1.11.2)
     nokogiri (1.6.6.2)
     rack (1.6.4)
@@ -132,6 +140,7 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.8.3)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -144,6 +153,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (= 3.2.0.0)
   byebug
+  clndr-rails
   coffee-rails (~> 4.1.0)
   font-awesome-sass
   jbuilder (~> 2.0)
