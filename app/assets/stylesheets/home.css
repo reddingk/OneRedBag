@@ -57,16 +57,16 @@
 }
 
 #thumbnail-preview-indicators .slides .slide-1 {
-  background-image: url( ../images/main/img6.jpg );
+  background-image: url( ../mainimg/img6.jpg );
 }
 #thumbnail-preview-indicators .slides .slide-2 {
-  background-image: url( ../images/main/img7.jpg);
+  background-image: url( ../mainimg/img7.jpg);
 }
 #thumbnail-preview-indicators .slides .slide-3 {
-  background-image: url( ../images/main/img8.jpg);
+  background-image: url( ../mainimg/img8.jpg);
 }
 #thumbnail-preview-indicators .slides .slide-4 {
-  background-image: url( ../images/main/img9.jpg);
+  background-image: url( ../mainimg/img9.jpg);
 }
 #thumbnail-preview-indicators .carousel-inner .item .carousel-caption {
   top: 20%;
