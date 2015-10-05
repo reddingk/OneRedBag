@@ -100,20 +100,25 @@ body {
 	font-size: 18px;
 }
 #orb-inside-nav > li > a:hover, #orb-inside-nav > li > a:focus {
-	/*color: #ffffff;*/
 	font-weight: bold;
-	background-color: #000000;
-	background-color:rgba(219, 77, 77, 0.7);
+	background-color: #DB4D4D;
+	color: #ffffff;
+	/*background-color:rgba(219, 77, 77, 0.7);*/
 }
-#orb-inside-nav > li >.current-page { 
+#orb-inside-nav > li >.current-page{ 
 	color: #DB4D4D;
+	border-top: 2px solid #DB4D4D;
 }
+ #orb-inside-nav > li >.current-page:hover, #orb-inside-nav > li >.current-page:focus {
+ 	background-color: #ffffff;
+ 	color: #DB4D4D;
+ }
 
 .social { 
 	width: 5.333% !important;
 }
 .social .fa { color: #DB4D4D !important; }
-.social .fa:hover { 
+.social .fa:hover, .social .fa:focus { 
 	color: #000000 !important; 
 	text-decoration:none;
 	background-color:rgba(255, 255, 255, 0.5) !important;
@@ -132,8 +137,27 @@ body {
 		10px 0px 10px -7px rgba(0,0,0,0.5),
 		-10px 0px 10px -7px rgba(0,0,0,0.5);*/
 }
-@media (max-width: 480) {
-	#orb-inside-nav {float: left;}	
+.navbar-toggle {
+	border-radius: 0px;
+}
+.navbar-toggle:focus, .navbar-toggle:hover {
+		background-color: #ffffff !important;
+}
+.navbar-toggle .icon-bar{ 
+	background-color: #000000 !important;
+}
+.navbar-toggle:focus .icon-bar {
+	background-color: #DB4D4D !important;
+}
+@media (max-width: 767px) { 
+	
+	#orb-inside-nav li, .social { 
+		display: block;
+		width: 100% !important;
+	}
+}
+@media (max-width: 480px) {
+	/*#orb-inside-nav {float: left;}*/
 }
 
 /*Footer*/

@@ -1,0 +1,7 @@
+<h1>Album - <%= @albumlocation.split('/').last %></h1>
+
+<% @photos.each do |photo| %>
+    <div class="col-md-4">
+        <%= image_tag( @albumlocation.split('/').last + "/" + photo.split('/').last , class: 'album-media-photo', alt: photo.split('/').last ) %>
+    </div>
+<% end %>

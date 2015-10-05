@@ -91,6 +91,12 @@
     /*max-height: 182px;*/
 }
 
+.album-media-photo {
+    max-width: 100%;
+    margin-bottom: 10px;
+    max-height: 182px;
+}
+
 
 /*Videos*/
 .media-video {

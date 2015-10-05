@@ -9,4 +9,17 @@ class MediaController < ApplicationController
   	end
   	
   end
+  
+  def album
+    @albumlocation = params[:location]
+    
+    @photolocation = Dir.glob( @albumlocation + "/*")
+    	@photos = []
+          	
+    	@photolocation.each do |photo|
+      @photos << photo
+    end
+  
+  end
+  
 end

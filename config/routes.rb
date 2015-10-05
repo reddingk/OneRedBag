@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   
 #Media
   get 'Media', to: 'media#index'
+  get 'Media/Album', to: 'media#album'
 
 #News
   ##get 'news/index' => 'news#index', :as => :news_path

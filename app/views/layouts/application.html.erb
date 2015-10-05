@@ -39,7 +39,7 @@
 							<li><%= link_to "Help Us", {controller: "helpus", action: "index"}, class: "#{cp({controller: "helpus", action: "index"})}" %></li>
 							<li><%= link_to "Media", {controller: "media", action: "index"}, class: "#{cp({controller: "media", action: "index"})}" %></li>
 							<!--Social Icons-->
-							<li class="social"><a href="" class="fa fa-envelope-o fa-lg"></a></li>
+							<li class="social"><a href="" class="fa fa-envelope-o fa-lg" data-toggle="modal" data-target="#Modal-Email"></a></li>
 							<li class="social"><a href="" class="fa fa-facebook fa-lg"></a></li>
 							<li class="social"><a href="" class="fa fa-youtube-play fa-lg"></a></li>
 						</ul>
@@ -81,5 +81,26 @@
 			</div>
 		</div>
 	</div>
+	
+	<!--Email Modal -->
+	<div id="Modal-Email" class="modal modal-wide fade" role="dialog">
+        <div class="modal-dialog">
+           
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Email Us</h4>
+                </div>
+                <div class="modal-body">
+               	<p>Email Form</p>
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>

@@ -21,6 +21,10 @@
 .helpus-content {
     font-size: 20px;
 }
+.donate-card { 
+    background-color: #DB4D4D;
+    min-height: 505px;
+}
 
 .helpus-cards {
     margin-top:30px;
@@ -39,6 +43,7 @@
     margin-top: 10px;
     background-color: #ffffff;
     padding: 30px;
+    min-height: 250px;
     
     transition: all 0.5s ease;
 }
