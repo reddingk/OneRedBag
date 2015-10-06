@@ -15,6 +15,7 @@
  *= require_self
  */
 /*Entire Site*/
+
 html, body { 
 	/*font-family: 'Josefin Sans', sans-serif;*/
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -208,4 +209,10 @@ body {
 }
 .title2 { 
 	margin-top: 20px;
+}
+
+@media screen and (max-width : 480px) { 
+  .navbar-header {
+  	background-color: rgba(219,77,77, 0.9);
+  }
 }

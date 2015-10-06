@@ -29,6 +29,9 @@
 .helpus-cards {
     margin-top:30px;
 }
+.helpus-card {
+    margin-bottom: 5px;
+}
 .helpus-card:hover .helpus-card-txt {
     background-color: #DB4D4D;
     color: #ffffff;

@@ -195,16 +195,20 @@
   right: 20px;
   color: #ffffff;
 }
-@media (min-width: 768px) {
+
+
+
+@media screen and (max-width: 1200px) {
 	
 }
-
-@media (min-width: 992px) {
+@media screen and (max-width: 992px) {
 
 }
-
-@media (min-width: 1200px) {
+@media screen and (max-width: 768px) {
 	
 }
-
-
+@media screen and (max-width : 480px) { 
+  .orb-cards {
+	  padding: 5px 0px !important;
+  }
+}

@@ -2,7 +2,7 @@
     <div class="media-header"><span>News</span></div>
     
     <% @headlinedate = @newsfeed[0]["date"].split(/-/)  %>
-    <div class="headline-news news-card col-sm-8">
+    <div class="headline-news news-card col-md-8">
         <div class="news-recent-photo"><%= image_tag( @albumlocation[0].split('/').last + "/" + @picturelocation[0].split('/').last ,class: 'news-photo-img', alt: 'news cover' ) %></div>
         <div class="news-title"><span><%= @newsfeed[0]["title"] %></span></div>
         <div class="news-date"><%= @headlinedate[1] %>.<%= @headlinedate[2]%>.<%= @headlinedate[0]%></div>
@@ -10,7 +10,7 @@
     </div>
     
     <% @itemnum = 0 %>
-    <div class="col-sm-4">
+    <div class="col-md-4">
         <% @newsfeed.each do |news| %>
             <% @newsdate = news["date"].split(/-/)  %>
             
