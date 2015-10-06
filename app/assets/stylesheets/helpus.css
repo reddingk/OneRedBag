@@ -25,6 +25,19 @@
     background-color: #DB4D4D;
     min-height: 505px;
 }
+.donate-title {
+    margin-top:20px;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+.donate-title i {
+    margin-right:2px; 
+    background-color: #ffffff;
+    border-radius:50px;
+    padding: 10px 15px;
+    color: #DB4D4D;
+}
 
 .helpus-cards {
     margin-top:30px;

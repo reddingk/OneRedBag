@@ -70,15 +70,20 @@ body {
   	left: 0;
   	z-index: 100;
   	width: 100%;
+  	
+  	
+}
+.nav-top {
+
 }
 
 .orb-nav-logo{ height: 40px; float:left; margin: 3px 0px;}
 
 #orb-main-nav {	
-	background-color: #ffffff; 
+	background-color: rgba(0,0,0,0.9);
+	/*background-color: #ffffff; */
 	border-top: 1px solid #cccccc;
 	border-bottom: 1px solid #cccccc;
-	/*#DB4D4D; */
 }
 .relative { position: relative; }
 .navbar-collapse { 
@@ -94,7 +99,8 @@ body {
 }
 
 #orb-inside-nav > li > a {
-	color: #000000;
+	color:#ffffff;
+	/*color: #000000;*/
 	padding: 15px 15px;
 	font-weight: bold;
 	text-align: center;
@@ -111,7 +117,8 @@ body {
 	border-top: 2px solid #DB4D4D;
 }
  #orb-inside-nav > li >.current-page:hover, #orb-inside-nav > li >.current-page:focus {
- 	background-color: #ffffff;
+ 	background-color: rgba(0,0,0,0.1);
+ 	/*background-color: #ffffff;*/
  	color: #DB4D4D;
  }
 
@@ -140,15 +147,16 @@ body {
 }
 .navbar-toggle {
 	border-radius: 0px;
+	border-color: transparent !important;
 }
 .navbar-toggle:focus, .navbar-toggle:hover {
-		background-color: #ffffff !important;
+		background-color: #DB4D4D !important;
 }
 .navbar-toggle .icon-bar{ 
-	background-color: #000000 !important;
+	background-color: #ffffff !important;
 }
 .navbar-toggle:focus .icon-bar {
-	background-color: #DB4D4D !important;
+	background-color: #ffffff !important;
 }
 @media (max-width: 767px) { 
 	
@@ -213,6 +221,6 @@ body {
 
 @media screen and (max-width : 480px) { 
   .navbar-header {
-  	background-color: rgba(219,77,77, 0.9);
+  	/*background-color: rgba(219,77,77, 0.9);*/
   }
 }
