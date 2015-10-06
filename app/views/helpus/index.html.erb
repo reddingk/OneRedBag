@@ -25,8 +25,30 @@
                    <%=  @full_clndr.view %>
                    <div class="event-list">
                        <div class="event-title">Calender Events</div>
+                       
                        <table>
-                           <tbody id="event-content"></tbody>
+                           <tbody id="event-content">
+                               <% @meetup.each do |startmeets| %>
+                                   <% if startmeets["date"].split("-")[1].to_i == Time.now.month.to_i %>
+    		                           <tr class='dayevents' id='dayevent-<%= startmeets["date"].split("-")[2] %>'>
+                                           <td><%=  startmeets["date"].split("-")[1] %>/<%=  startmeets["date"].split("-")[2] %></td>
+                                           <td class='event-info'>
+                                               <div>
+                                                   <%= startmeets["title"] %>-
+                                                   <span>
+                                                       <% if startmeets["time"].split(":")[0].to_i < 13 %>
+                                                           <%= startmeets["time"] %> AM
+                                                       <% else %>
+                                                           <%= startmeets["time"].split(":")[0].to_i - 12 %>:<%= startmeets["time"].split(":")[1]%> PM
+                                                       <% end %>
+                                                   </span>
+                                               </div>
+                                               <div><%= startmeets["location"] %></div>
+                                           </td>
+                                       </tr>
+                                   <% end %>
+	                           <% end %>
+                           </tbody>
                        </table>
                    </div>
                 </div>

@@ -25,16 +25,13 @@ function finddates(addval) {
     });
 };
  $(document).on('click', '.clndr-previous-button', function() {
-    console.log("Find Dates Fired [-1]<");  
     finddates(-1); 
 });
     
 $(document).on('click', '.clndr-next-button', function() { 
-    console.log("Find Dates Fired [1]>"); 
     finddates(1);
 });
 $(document).on('click', '.event .day-contents', function() { 
-    console.log("[]= " + $(this).text() );
     
     $(".dayevents").removeClass("selected");
     if(parseInt($(this).text()) < 10) {
