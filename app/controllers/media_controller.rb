@@ -10,6 +10,7 @@ class MediaController < ApplicationController
   	
   end
   
+  
   def album
     @albumlocation = params[:location]
     
